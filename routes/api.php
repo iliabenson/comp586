@@ -16,3 +16,16 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Route::group(['middleware' => ['cors', 'auth.basic']], function () {
+// 	Route::get('/dashboard', 'HeroController@dash');
+// 	Route::get('/heroes', 'HeroController@index');
+// 	Route::get('/hero/{id}', 'HeroController@show');
+// });
+
+Route::group(['middleware' => 'cors'], function () {
+	Route::get('/dashboard', 'HeroController@dash');
+	Route::get('/heroes', 'HeroController@index');
+	Route::get('/hero/{id}', 'HeroController@show');
+});
+

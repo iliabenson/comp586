@@ -14,7 +14,9 @@ class HeroController extends Controller
      */
     public function index()
     {
-        //
+        $heroes = Hero::select('id', 'name')->get();
+        return $heroes;
+        // return response()->json(200);
     }
 
     /**
