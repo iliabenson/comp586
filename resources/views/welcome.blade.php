@@ -1,7 +1,7 @@
 <?php
-// echo file_get_contents("/home/vagrant/comp586/frontend/dist/index.html");
-// readfile("/home/vagrant/comp586/frontend/dist/index.html");
-
+// echo file_get_contents("../../../frontend/dist/index.html");
+// readfile("../../frontend/dist/index.html");
+include($_SERVER['DOCUMENT_ROOT']."/client.html");
 // file_get_contents(base_path() . '/frontend/dist/index.html');
 
-echo "RAWR";
+// echo "RAWR";
