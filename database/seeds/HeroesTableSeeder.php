@@ -11,6 +11,36 @@ class HeroesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Hero::class, 10)->create();
+        // factory(App\Hero::class, 10)->create();
+		App\Hero::create([
+			'name' => 'Mr. Nice'
+		]);
+		App\Hero::create([
+			'name' => 'Narco'
+		]);
+		App\Hero::create([
+			'name' => 'Bombasto'
+		]);
+		App\Hero::create([
+			'name' => 'Celeritas'
+		]);
+		App\Hero::create([
+			'name' => 'Magneta'
+		]);
+		App\Hero::create([
+			'name' => 'RubberMan'
+		]);
+		App\Hero::create([
+			'name' => 'Dynama'
+		]);
+		App\Hero::create([
+			'name' => 'Dr IQ'
+		]);
+		App\Hero::create([
+			'name' => 'Magma'
+		]);
+		App\Hero::create([
+			'name' => 'Tornado'
+		]);
     }
 }

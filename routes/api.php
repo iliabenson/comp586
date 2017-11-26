@@ -25,7 +25,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['middleware' => 'cors'], function () {
 	Route::get('/dashboard', 'HeroController@dash');
+	Route::get('/heroes/{id}', 'HeroController@show');
 	Route::get('/heroes', 'HeroController@index');
-	Route::get('/hero/{id}', 'HeroController@show');
 });
 

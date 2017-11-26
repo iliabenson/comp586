@@ -46,9 +46,19 @@ class HeroController extends Controller
      * @param  \App\Hero  $hero
      * @return \Illuminate\Http\Response
      */
-    public function show(Hero $hero)
+    public function show($id)
     {
-        //
+        $hero = Hero::select('id', 'name')
+            ->where('id', $id)
+            ->get();
+        if($hero->isEmpty()){
+            // return response()->json(404);
+            return null;
+        }
+        else{
+            return $hero;
+        }
+        // return response()->json(200);
     }
 
     /**
