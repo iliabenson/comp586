@@ -16,17 +16,19 @@ class HeroController extends Controller
     {
         $heroes = Hero::select('id', 'name')->get();
         return $heroes;
-        // return response()->json(200);
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function search($name)
     {
-        //
+        $heroes = Hero::select('id', 'name')
+            ->where('name', 'like', '%' . $name . '%')
+            ->get();
+        return $heroes;
     }
 
     /**
@@ -37,7 +39,9 @@ class HeroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $hero = new Hero($request->all());
+        $hero->save();
+        return $hero->only(['id', 'name']);
     }
 
     /**
@@ -48,17 +52,8 @@ class HeroController extends Controller
      */
     public function show($id)
     {
-        $hero = Hero::select('id', 'name')
-            ->where('id', $id)
-            ->get();
-        if($hero->isEmpty()){
-            // return response()->json(404);
-            return null;
-        }
-        else{
-            return $hero;
-        }
-        // return response()->json(200);
+        $hero = Hero::findOrFail($id);
+        return $hero->only(['id', 'name']);
     }
 
     /**
@@ -79,9 +74,12 @@ class HeroController extends Controller
      * @param  \App\Hero  $hero
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Hero $hero)
+    public function update(Request $request, $id)
     {
-        //
+        $hero = Hero::findOrFail($id);
+        $hero->name = $request->input('name');
+        $hero->save();
+        return $hero->only(['id', 'name']);
     }
 
     /**
@@ -90,8 +88,10 @@ class HeroController extends Controller
      * @param  \App\Hero  $hero
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Hero $hero)
+    public function destroy($id)
     {
-        //
+        $hero = Hero::findOrFail($id);
+        $hero->delete();
+        return null;
     }
 }

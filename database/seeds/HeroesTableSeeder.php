@@ -13,7 +13,7 @@ class HeroesTableSeeder extends Seeder
     {
         // factory(App\Hero::class, 10)->create();
 		App\Hero::create([
-			'name' => 'Mr. Nice'
+			'name' => 'Windforce'
 		]);
 		App\Hero::create([
 			'name' => 'Narco'
