@@ -92,6 +92,6 @@ class HeroController extends Controller
     {
         $hero = Hero::findOrFail($id);
         $hero->delete();
-        return null;
+        return [];
     }
 }
