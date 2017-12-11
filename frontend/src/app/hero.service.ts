@@ -13,7 +13,8 @@ const httpOptions = {
 @Injectable()
 export class HeroService {
 
-  private heroesUrl = 'http://comp586.app/api/heroes';  // Todo: fix this, URL to web api
+  // private heroesUrl = 'http://comp586.app/api/heroes';  // Todo: fix this, URL to web api
+  private heroesUrl = 'http://ec2-34-215-152-141.us-west-2.compute.amazonaws.com/api/heroes';
 
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

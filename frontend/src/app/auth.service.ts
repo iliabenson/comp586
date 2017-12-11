@@ -10,9 +10,11 @@ export class AuthService {
     clientID: 'NzEtqK8eV0pWBB3Sp2sUmDIjqGG4xN20',
     domain: 'comp586-2017.auth0.com',
     responseType: 'token id_token',
-    audience: 'https://comp586-2017.auth0.com/userinfo',
+    // audience: 'https://comp586-2017.auth0.com/userinfo',
     redirectUri: 'http://comp586.app/dist/dashboard',
-    scope: 'openid'
+    // scope: 'openid',
+    audience: '{http://ec2-34-215-152-141.us-west-2.compute.amazonaws.com/api}',
+    scope: 'openid profile read:messages'
   });
 
   constructor(public router: Router) {}
