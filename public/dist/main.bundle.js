@@ -237,9 +237,9 @@ var AuthService = (function () {
             domain: 'comp586-2017.auth0.com',
             responseType: 'token id_token',
             // audience: 'https://comp586-2017.auth0.com/userinfo',
-            redirectUri: 'http://comp586.app/dist/dashboard',
+            redirectUri: 'http://ec2-34-215-152-141.us-west-2.compute.amazonaws.com/dist/dashboard',
             // scope: 'openid',
-            audience: '{http://ec2-34-215-152-141.us-west-2.compute.amazonaws.com/api}',
+            audience: 'http://ec2-34-215-152-141.us-west-2.compute.amazonaws.com/api',
             scope: 'openid profile read:messages'
         });
     }
