@@ -1,7 +1,15 @@
 <h1>{{title}}</h1>
-<nav>
-	<a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
-</nav>
+<div *ngIf="!authService.isAuthenticated()">
+  <nav>
+    <a (click)="authService.login()">Log In</a>
+  </nav>
+</div>
+<div *ngIf="authService.isAuthenticated()">
+  <nav>
+    <a (click)="authService.logout()">Log Out</a>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes">Heroes</a>
+  </nav>
+</div>
 <router-outlet></router-outlet>
 <app-messages></app-messages>
