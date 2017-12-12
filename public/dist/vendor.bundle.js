@@ -9251,38 +9251,6 @@ __WEBPACK_IMPORTED_MODULE_0__Observable__["Observable"].fromPromise = __WEBPACK_
 
 /***/ }),
 
-/***/ "../../../../rxjs/_esm5/add/operator/catch.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__operator_catch__ = __webpack_require__("../../../../rxjs/_esm5/operator/catch.js");
-/** PURE_IMPORTS_START .._.._Observable,.._.._operator_catch PURE_IMPORTS_END */
-
-
-__WEBPACK_IMPORTED_MODULE_0__Observable__["Observable"].prototype.catch = __WEBPACK_IMPORTED_MODULE_1__operator_catch__["a" /* _catch */];
-__WEBPACK_IMPORTED_MODULE_0__Observable__["Observable"].prototype._catch = __WEBPACK_IMPORTED_MODULE_1__operator_catch__["a" /* _catch */];
-//# sourceMappingURL=catch.js.map 
-
-
-/***/ }),
-
-/***/ "../../../../rxjs/_esm5/add/operator/do.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__operator_do__ = __webpack_require__("../../../../rxjs/_esm5/operator/do.js");
-/** PURE_IMPORTS_START .._.._Observable,.._.._operator_do PURE_IMPORTS_END */
-
-
-__WEBPACK_IMPORTED_MODULE_0__Observable__["Observable"].prototype.do = __WEBPACK_IMPORTED_MODULE_1__operator_do__["a" /* _do */];
-__WEBPACK_IMPORTED_MODULE_0__Observable__["Observable"].prototype._do = __WEBPACK_IMPORTED_MODULE_1__operator_do__["a" /* _do */];
-//# sourceMappingURL=do.js.map 
-
-
-/***/ }),
-
 /***/ "../../../../rxjs/_esm5/add/operator/filter.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -9294,21 +9262,6 @@ __WEBPACK_IMPORTED_MODULE_0__Observable__["Observable"].prototype._do = __WEBPAC
 
 __WEBPACK_IMPORTED_MODULE_0__Observable__["Observable"].prototype.filter = __WEBPACK_IMPORTED_MODULE_1__operator_filter__["a" /* filter */];
 //# sourceMappingURL=filter.js.map 
-
-
-/***/ }),
-
-/***/ "../../../../rxjs/_esm5/add/operator/map.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__operator_map__ = __webpack_require__("../../../../rxjs/_esm5/operator/map.js");
-/** PURE_IMPORTS_START .._.._Observable,.._.._operator_map PURE_IMPORTS_END */
-
-
-__WEBPACK_IMPORTED_MODULE_0__Observable__["Observable"].prototype.map = __WEBPACK_IMPORTED_MODULE_1__operator_map__["a" /* map */];
-//# sourceMappingURL=map.js.map 
 
 
 /***/ }),
@@ -11439,66 +11392,6 @@ function concatMap(project, resultSelector) {
 
 /***/ }),
 
-/***/ "../../../../rxjs/_esm5/operator/do.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = _do;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__operators_tap__ = __webpack_require__("../../../../rxjs/_esm5/operators/tap.js");
-/** PURE_IMPORTS_START .._operators_tap PURE_IMPORTS_END */
-
-/* tslint:enable:max-line-length */
-/**
- * Perform a side effect for every emission on the source Observable, but return
- * an Observable that is identical to the source.
- *
- * <span class="informal">Intercepts each emission on the source and runs a
- * function, but returns an output which is identical to the source as long as errors don't occur.</span>
- *
- * <img src="./img/do.png" width="100%">
- *
- * Returns a mirrored Observable of the source Observable, but modified so that
- * the provided Observer is called to perform a side effect for every value,
- * error, and completion emitted by the source. Any errors that are thrown in
- * the aforementioned Observer or handlers are safely sent down the error path
- * of the output Observable.
- *
- * This operator is useful for debugging your Observables for the correct values
- * or performing other side effects.
- *
- * Note: this is different to a `subscribe` on the Observable. If the Observable
- * returned by `do` is not subscribed, the side effects specified by the
- * Observer will never happen. `do` therefore simply spies on existing
- * execution, it does not trigger an execution to happen like `subscribe` does.
- *
- * @example <caption>Map every click to the clientX position of that click, while also logging the click event</caption>
- * var clicks = Rx.Observable.fromEvent(document, 'click');
- * var positions = clicks
- *   .do(ev => console.log(ev))
- *   .map(ev => ev.clientX);
- * positions.subscribe(x => console.log(x));
- *
- * @see {@link map}
- * @see {@link subscribe}
- *
- * @param {Observer|function} [nextOrObserver] A normal Observer object or a
- * callback for `next`.
- * @param {function} [error] Callback for errors in the source.
- * @param {function} [complete] Callback for the completion of the source.
- * @return {Observable} An Observable identical to the source, but runs the
- * specified Observer or callback(s) for each item.
- * @method do
- * @name do
- * @owner Observable
- */
-function _do(nextOrObserver, error, complete) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__operators_tap__["a" /* tap */])(nextOrObserver, error, complete)(this);
-}
-//# sourceMappingURL=do.js.map 
-
-
-/***/ }),
-
 /***/ "../../../../rxjs/_esm5/operator/every.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11995,7 +11888,7 @@ function share() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__operators_bufferWhen__ = __webpack_require__("../../../../rxjs/_esm5/operators/bufferWhen.js");
 /* unused harmony reexport bufferWhen */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__operators_catchError__ = __webpack_require__("../../../../rxjs/_esm5/operators/catchError.js");
-/* unused harmony reexport catchError */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_7__operators_catchError__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__operators_combineAll__ = __webpack_require__("../../../../rxjs/_esm5/operators/combineAll.js");
 /* unused harmony reexport combineAll */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__operators_combineLatest__ = __webpack_require__("../../../../rxjs/_esm5/operators/combineLatest.js");
@@ -12013,7 +11906,7 @@ function share() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__operators_debounce__ = __webpack_require__("../../../../rxjs/_esm5/operators/debounce.js");
 /* unused harmony reexport debounce */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__operators_debounceTime__ = __webpack_require__("../../../../rxjs/_esm5/operators/debounceTime.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_16__operators_debounceTime__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_16__operators_debounceTime__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__operators_defaultIfEmpty__ = __webpack_require__("../../../../rxjs/_esm5/operators/defaultIfEmpty.js");
 /* unused harmony reexport defaultIfEmpty */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__operators_delay__ = __webpack_require__("../../../../rxjs/_esm5/operators/delay.js");
@@ -12025,7 +11918,7 @@ function share() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__operators_distinct__ = __webpack_require__("../../../../rxjs/_esm5/operators/distinct.js");
 /* unused harmony reexport distinct */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__operators_distinctUntilChanged__ = __webpack_require__("../../../../rxjs/_esm5/operators/distinctUntilChanged.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_22__operators_distinctUntilChanged__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_22__operators_distinctUntilChanged__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__operators_distinctUntilKeyChanged__ = __webpack_require__("../../../../rxjs/_esm5/operators/distinctUntilKeyChanged.js");
 /* unused harmony reexport distinctUntilKeyChanged */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__operators_elementAt__ = __webpack_require__("../../../../rxjs/_esm5/operators/elementAt.js");
@@ -12138,7 +12031,7 @@ function share() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_77__operators_switchAll__ = __webpack_require__("../../../../rxjs/_esm5/operators/switchAll.js");
 /* unused harmony reexport switchAll */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_78__operators_switchMap__ = __webpack_require__("../../../../rxjs/_esm5/operators/switchMap.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_78__operators_switchMap__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_78__operators_switchMap__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_79__operators_switchMapTo__ = __webpack_require__("../../../../rxjs/_esm5/operators/switchMapTo.js");
 /* unused harmony reexport switchMapTo */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_80__operators_take__ = __webpack_require__("../../../../rxjs/_esm5/operators/take.js");
@@ -12150,7 +12043,7 @@ function share() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_83__operators_takeWhile__ = __webpack_require__("../../../../rxjs/_esm5/operators/takeWhile.js");
 /* unused harmony reexport takeWhile */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_84__operators_tap__ = __webpack_require__("../../../../rxjs/_esm5/operators/tap.js");
-/* unused harmony reexport tap */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_84__operators_tap__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_85__operators_throttle__ = __webpack_require__("../../../../rxjs/_esm5/operators/throttle.js");
 /* unused harmony reexport throttle */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_86__operators_throttleTime__ = __webpack_require__("../../../../rxjs/_esm5/operators/throttleTime.js");
@@ -33600,13 +33493,13 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["Version"]('5.1.0'
 "use strict";
 /* unused harmony export HttpBackend */
 /* unused harmony export HttpHandler */
-/* unused harmony export HttpClient */
-/* unused harmony export HttpHeaders */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpClient; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return HttpHeaders; });
 /* unused harmony export HTTP_INTERCEPTORS */
 /* unused harmony export JsonpClientBackend */
 /* unused harmony export JsonpInterceptor */
 /* unused harmony export HttpClientJsonpModule */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpClientModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return HttpClientModule; });
 /* unused harmony export HttpClientXsrfModule */
 /* unused harmony export ɵinterceptingHandler */
 /* unused harmony export HttpParams */
