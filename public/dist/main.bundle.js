@@ -52,7 +52,7 @@ var AppRoutingModule = (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */].forRoot(routes)],
             exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */]]
         })
@@ -116,7 +116,7 @@ var AppComponent = (function () {
         this.authService.handleAuthentication();
     };
     AppComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
             template: __webpack_require__("../../../../../src/app/app.component.html"),
             styles: [__webpack_require__("../../../../../src/app/app.component.css")]
@@ -135,21 +135,25 @@ var AppComponent = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* unused harmony export authHttpServiceFactory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__heroes_heroes_component__ = __webpack_require__("../../../../../src/app/heroes/heroes.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hero_detail_hero_detail_component__ = __webpack_require__("../../../../../src/app/hero-detail/hero-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__messages_messages_component__ = __webpack_require__("../../../../../src/app/messages/messages.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hero_search_hero_search_component__ = __webpack_require__("../../../../../src/app/hero-search/hero-search.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__hero_service__ = __webpack_require__("../../../../../src/app/hero.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__message_service__ = __webpack_require__("../../../../../src/app/message.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__auth_service__ = __webpack_require__("../../../../../src/app/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_jwt__ = __webpack_require__("../../../../angular2-jwt/angular2-jwt.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_jwt__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__heroes_heroes_component__ = __webpack_require__("../../../../../src/app/heroes/heroes.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hero_detail_hero_detail_component__ = __webpack_require__("../../../../../src/app/hero-detail/hero-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__messages_messages_component__ = __webpack_require__("../../../../../src/app/messages/messages.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__hero_search_hero_search_component__ = __webpack_require__("../../../../../src/app/hero-search/hero-search.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__hero_service__ = __webpack_require__("../../../../../src/app/hero.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__message_service__ = __webpack_require__("../../../../../src/app/message.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__auth_service__ = __webpack_require__("../../../../../src/app/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -171,37 +175,49 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__heroes_heroes_component__["a" /* HeroesComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__hero_detail_hero_detail_component__["a" /* HeroDetailComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__messages_messages_component__["a" /* MessagesComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__dashboard_dashboard_component__["a" /* DashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__hero_search_hero_search_component__["a" /* HeroSearchComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__heroes_heroes_component__["a" /* HeroesComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__hero_detail_hero_detail_component__["a" /* HeroDetailComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__messages_messages_component__["a" /* MessagesComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__dashboard_dashboard_component__["a" /* DashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__hero_search_hero_search_component__["a" /* HeroSearchComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__home_home_component__["a" /* HomeComponent */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_13__app_routing_module__["a" /* AppRoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_15__app_routing_module__["a" /* AppRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClientModule */],
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_10__hero_service__["a" /* HeroService */],
-                __WEBPACK_IMPORTED_MODULE_11__message_service__["a" /* MessageService */],
-                __WEBPACK_IMPORTED_MODULE_12__auth_service__["a" /* AuthService */],
+                __WEBPACK_IMPORTED_MODULE_12__hero_service__["a" /* HeroService */],
+                __WEBPACK_IMPORTED_MODULE_13__message_service__["a" /* MessageService */],
+                __WEBPACK_IMPORTED_MODULE_14__auth_service__["a" /* AuthService */],
+                {
+                    provide: __WEBPACK_IMPORTED_MODULE_5_angular2_jwt__["AuthHttp"],
+                    useFactory: authHttpServiceFactory,
+                    deps: [__WEBPACK_IMPORTED_MODULE_4__angular_http__["Http"], __WEBPACK_IMPORTED_MODULE_4__angular_http__["RequestOptions"]]
+                }
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
 }());
 
+function authHttpServiceFactory(http, options) {
+    return new __WEBPACK_IMPORTED_MODULE_5_angular2_jwt__["AuthHttp"](new __WEBPACK_IMPORTED_MODULE_5_angular2_jwt__["AuthConfig"]({
+        tokenGetter: (function () { return localStorage.getItem('access_token'); })
+    }), http, options);
+}
 
 
 /***/ }),
@@ -282,7 +298,7 @@ var AuthService = (function () {
         return new Date().getTime() < expiresAt;
     };
     AuthService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
     ], AuthService);
     return AuthService;
@@ -349,7 +365,7 @@ var DashboardComponent = (function () {
             .subscribe(function (heroes) { return _this.heroes = heroes.slice(1, 5); });
     };
     DashboardComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-dashboard',
             template: __webpack_require__("../../../../../src/app/dashboard/dashboard.component.html"),
             styles: [__webpack_require__("../../../../../src/app/dashboard/dashboard.component.css")]
@@ -436,11 +452,11 @@ var HeroDetailComponent = (function () {
         this.location.back();
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4__hero__["a" /* Hero */])
     ], HeroDetailComponent.prototype, "hero", void 0);
     HeroDetailComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-hero-detail',
             template: __webpack_require__("../../../../../src/app/hero-detail/hero-detail.component.html"),
             styles: [__webpack_require__("../../../../../src/app/hero-detail/hero-detail.component.css")]
@@ -516,14 +532,14 @@ var HeroSearchComponent = (function () {
         var _this = this;
         this.heroes$ = this.searchTerms.pipe(
         // wait 300ms after each keystroke before considering the term
-        Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["b" /* debounceTime */])(300), 
+        Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* debounceTime */])(300), 
         // ignore new term if same as previous term
-        Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["c" /* distinctUntilChanged */])(), 
+        Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["b" /* distinctUntilChanged */])(), 
         // switch to new search observable each time the term changes
-        Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["d" /* switchMap */])(function (term) { return _this.heroService.searchHeroes(term); }));
+        Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["c" /* switchMap */])(function (term) { return _this.heroService.searchHeroes(term); }));
     };
     HeroSearchComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-hero-search',
             template: __webpack_require__("../../../../../src/app/hero-search/hero-search.component.html"),
             styles: [__webpack_require__("../../../../../src/app/hero-search/hero-search.component.css")]
@@ -545,8 +561,11 @@ var HeroSearchComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/observable/of.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__message_service__ = __webpack_require__("../../../../../src/app/message.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operators__ = __webpack_require__("../../../../rxjs/_esm5/operators.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__ = __webpack_require__("../../../../angular2-jwt/angular2-jwt.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_do__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/do.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -559,14 +578,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+// import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
-var httpOptions = {
-    headers: new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' })
-};
+
+
+// const httpOptions = {
+//   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+// };
 var HeroService = (function () {
-    function HeroService(http, messageService) {
-        this.http = http;
+    function HeroService(
+        // private http: HttpClient,
+        authHttp, messageService) {
+        this.authHttp = authHttp;
         this.messageService = messageService;
         // private heroesUrl = 'http://comp586.app/api/heroes';  // Todo: fix this, URL to web api
         this.heroesUrl = 'http://ec2-34-215-152-141.us-west-2.compute.amazonaws.com/api/heroes';
@@ -585,50 +609,82 @@ var HeroService = (function () {
     };
     /** GET heroes from the server */
     HeroService.prototype.getHeroes = function () {
+        // return this.http.get<Hero[]>(this.heroesUrl).pipe(
+        //   tap(heroes => this.log(`fetched heroes, ${this.heroesUrl}`)),
+        //   catchError(this.handleError('getHeroes', []))
+        // );
         var _this = this;
-        return this.http.get(this.heroesUrl).pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["e" /* tap */])(function (heroes) { return _this.log("fetched heroes, " + _this.heroesUrl); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError('getHeroes', [])));
+        return this.authHttp.get(this.heroesUrl)
+            .map(function (res) { return res.json(); })
+            .do(function (heroes) { return _this.log("fetched heroes, " + _this.heroesUrl); })
+            .catch(this.handleError('getHeroes', []));
     };
     /** GET hero by id. Will 404 if id not found */
     HeroService.prototype.getHero = function (id) {
-        var _this = this;
         var url = this.heroesUrl + "/" + id;
-        return this.http.get(url).pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["e" /* tap */])(function (_) { return _this.log("fetched hero id=" + id + ", " + url); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError("getHero id=" + id)));
+        // return this.http.get<Hero>(url).pipe(
+        //   tap(_ => this.log(`fetched hero id=${id}, ${url}`)),
+        //   catchError(this.handleError<Hero>(`getHero id=${id}`))
+        // );
+        return this.authHttp.get(url)
+            .map(function (res) { return res.json(); })
+            .catch(this.handleError("getHero id=" + id));
     };
     /** PUT: update the hero on the server */
     HeroService.prototype.updateHero = function (hero) {
-        var _this = this;
         var url = this.heroesUrl + "/" + hero.id;
-        return this.http.put(url, hero, httpOptions).pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["e" /* tap */])(function (_) { return _this.log("updated hero id=" + hero.id + ", " + url); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError('updateHero')));
+        // return this.http.put(url, hero, httpOptions).pipe(
+        //   tap(_ => this.log(`updated hero id=${hero.id}, ${url}`)),
+        //   catchError(this.handleError<any>('updateHero'))
+        // );
+        return this.authHttp.put(url, hero)
+            .map(function (res) { return res.json(); })
+            .catch(this.handleError('updateHero'));
     };
     /** POST: add a new hero to the server */
     HeroService.prototype.addHero = function (hero) {
-        var _this = this;
-        return this.http.post(this.heroesUrl, hero, httpOptions).pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["e" /* tap */])(function (hero) { return _this.log("added hero w/ id=" + hero.id + ", " + _this.heroesUrl); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError('addHero')));
+        // return this.http.post<Hero>(this.heroesUrl, hero, httpOptions).pipe(
+        //   tap((hero: Hero) => this.log(`added hero w/ id=${hero.id}, ${this.heroesUrl}`)),
+        //   catchError(this.handleError<Hero>('addHero'))
+        // );
+        return this.authHttp.post(this.heroesUrl, hero)
+            .map(function (res) { return res.json(); })
+            .catch(this.handleError('addHero'));
     };
     /** DELETE: delete the hero from the server */
     HeroService.prototype.deleteHero = function (hero) {
-        var _this = this;
         var id = typeof hero === 'number' ? hero : hero.id;
         var url = this.heroesUrl + "/" + id;
-        return this.http.delete(url, httpOptions).pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["e" /* tap */])(function (_) { return _this.log("deleted hero id=" + id + ", " + url); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError('deleteHero')));
+        // return this.http.delete<Hero>(url, httpOptions).pipe(
+        //   tap(_ => this.log(`deleted hero id=${id}, ${url}`)),
+        //   catchError(this.handleError<Hero>('deleteHero'))
+        // );
+        return this.authHttp.delete(url)
+            .map(function (res) { return res.json(); })
+            .catch(this.handleError('deleteHero'));
     };
     /* GET heroes whose name contains search term */
     HeroService.prototype.searchHeroes = function (term) {
-        var _this = this;
         if (!term.trim()) {
             // if not search term, return empty hero array.
             return Object(__WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__["a" /* of */])([]);
         }
         var url = this.heroesUrl + "/search/" + term;
-        return this.http.get(url).pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["e" /* tap */])(function (_) { return _this.log("found heroes matching \"" + term + "\", " + url); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError('searchHeroes', [])));
+        // return this.http.get<Hero[]>(url).pipe(
+        //   tap(_ => this.log(`found heroes matching "${term}", ${url}`)),
+        //   catchError(this.handleError<Hero[]>('searchHeroes', []))
+        // );
+        return this.authHttp.get(url)
+            .map(function (res) { return res.json(); })
+            .catch(this.handleError('searchHeroes', []));
     };
     /** Log a HeroService message with the MessageService */
     HeroService.prototype.log = function (message) {
         this.messageService.add('HeroService: ' + message);
     };
     HeroService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */],
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["AuthHttp"],
             __WEBPACK_IMPORTED_MODULE_2__message_service__["a" /* MessageService */]])
     ], HeroService);
     return HeroService;
@@ -724,7 +780,7 @@ var HeroesComponent = (function () {
         this.heroService.deleteHero(hero).subscribe();
     };
     HeroesComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-heroes',
             template: __webpack_require__("../../../../../src/app/heroes/heroes.component.html"),
             styles: [__webpack_require__("../../../../../src/app/heroes/heroes.component.css")]
@@ -785,7 +841,7 @@ var HomeComponent = (function () {
     HomeComponent.prototype.ngOnInit = function () {
     };
     HomeComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-home',
             template: __webpack_require__("../../../../../src/app/home/home.component.html"),
             styles: [__webpack_require__("../../../../../src/app/home/home.component.css")]
@@ -823,7 +879,7 @@ var MessageService = (function () {
         this.messages = [];
     };
     MessageService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])()
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
     ], MessageService);
     return MessageService;
 }());
@@ -882,7 +938,7 @@ var MessagesComponent = (function () {
     MessagesComponent.prototype.ngOnInit = function () {
     };
     MessagesComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-messages',
             template: __webpack_require__("../../../../../src/app/messages/messages.component.html"),
             styles: [__webpack_require__("../../../../../src/app/messages/messages.component.css")]
@@ -926,7 +982,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
