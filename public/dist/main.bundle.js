@@ -400,7 +400,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/hero-detail/hero-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"hero\">\n  <h2>{{hero.name | uppercase}} Details</h2>\n  <div><span>id: </span>{{hero.id}}</div>\n  <div>\n    <label>name:\n      <input [(ngModel)]=\"hero.name\" placeholder=\"name\">\n    </label>\n  </div>\n</div>\n<button (click)=\"save()\">save</button>\n<button (click)=\"goBack()\">go back</button>\n"
+module.exports = "<div class=\"test-hero\" *ngIf=\"hero\">\n  <h2>{{hero.name | uppercase}} Details</h2>\n  <div><span>id: </span>{{hero.id}}</div>\n  <div>\n    <label>name:\n      <input [(ngModel)]=\"hero.name\" placeholder=\"name\">\n    </label>\n  </div>\n</div>\n<button (click)=\"save()\">save</button>\n<button (click)=\"goBack()\">go back</button>\n"
 
 /***/ }),
 
