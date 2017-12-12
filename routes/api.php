@@ -28,7 +28,7 @@ Route::get('/private', function (Request $request) {
 
 // , 'auth:api'
 
-Route::group(['middleware' => ['cors', 'auth:api']], function () {
+Route::group(['middleware' => ['cors'], function () {
 	Route::delete('/heroes/{id}', 'HeroController@destroy');
 	Route::get('/heroes/search/{name}', 'HeroController@search');
 	Route::get('/heroes/{id}', 'HeroController@show');
