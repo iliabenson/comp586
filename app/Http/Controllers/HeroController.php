@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Hero;
+use App\User;
 use Illuminate\Http\Request;
 
 class HeroController extends Controller
@@ -39,8 +40,9 @@ class HeroController extends Controller
      */
     public function store(Request $request)
     {
+        $user = User::findOrFail(1);
         $hero = new Hero($request->all());
-        $hero->save();
+        $user->heroes()->save($hero);
         return $hero->only(['id', 'name']);
     }
 
@@ -76,9 +78,10 @@ class HeroController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $user = User::findOrFail(1);
         $hero = Hero::findOrFail($id);
         $hero->name = $request->input('name');
-        $hero->save();
+        $user->heroes()->save($hero);
         return $hero->only(['id', 'name']);
     }
 
